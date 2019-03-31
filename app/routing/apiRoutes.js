@@ -4,10 +4,12 @@
 
 
 // Load express module
-const express = require("express");
+// const express = require("express");
 
 // Load path module  https://nodejs.org/api/path.html
 const path = require("path");
+
+const friendData = require("../data/friends.js");
 
 module.exports = (app) => {
     // API GET Requests
@@ -23,7 +25,7 @@ module.exports = (app) => {
 
     // A default, catch-all route that leads to `home.html` which displays the home page.
     app.post("/api/friends", (req, res) => {
-        res.send(`post api/friends ${req.data}`);
+        res.send(`post api/friends ${req.friendData}`);
     });
 
 
