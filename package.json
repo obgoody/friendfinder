@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/obgoody/friendfinder#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "chalk": "^2.4.2",
     "express": "^4.16.4",
     "inquirer": "^6.2.2",
