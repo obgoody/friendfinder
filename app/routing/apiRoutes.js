@@ -22,13 +22,13 @@ module.exports = (app) => {
     //     res.send(`get api/friends ${JSON.stringify(req)}`);
     // });
     app.get("/api/friends", (req, res) => {
-        res.json(friendsArray);
+        res.json(friendsData);
       });
 
 
     // A default, catch-all route that leads to `home.html` which displays the home page.
     app.post("/api/friends", (req, res) => {
-        res.send(`post api/friends ${req.friendsArray}`);
+        res.send(`post api/friends ${req.friendsData}`);
     });
 
 
