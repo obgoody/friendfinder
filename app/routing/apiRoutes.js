@@ -9,7 +9,7 @@
 // Load path module  
 const path = require("path");
 
-const friendData = require("../data/friends.js");
+const friendData = require("../data/friends");
 
 module.exports = (app) => {
     // API GET Requests
@@ -18,17 +18,17 @@ module.exports = (app) => {
     // ---------------------------------------------------------------------------
     
     // Route that leads to the survey page
-    // app.get("/api/friends", (req, res) => {
-    //     res.send(`get api/friends ${JSON.stringify(req)}`);
-    // });
     app.get("/api/friends", (req, res) => {
-        res.json(friendsData);
-      });
+        res.send(`get api/friends ${JSON.stringify(req)}`);
+    });
+    // app.get("/api/friends", (req, res) => {
+    //     res.json(friends);
+    //   });
 
 
     // A default, catch-all route that leads to `home.html` which displays the home page.
     app.post("/api/friends", (req, res) => {
-        res.send(`post api/friends ${req.friendsData}`);
+        res.send(`post api/friends ${req.friends}`);
     });
 
 
