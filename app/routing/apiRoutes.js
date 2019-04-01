@@ -18,14 +18,17 @@ module.exports = (app) => {
     // ---------------------------------------------------------------------------
     
     // Route that leads to the survey page
+    // app.get("/api/friends", (req, res) => {
+    //     res.send(`get api/friends ${JSON.stringify(req)}`);
+    // });
     app.get("/api/friends", (req, res) => {
-        res.send(`get api/friends ${JSON.stringify(req)}`);
-    });
+        res.json(friendsArray);
+      });
 
 
     // A default, catch-all route that leads to `home.html` which displays the home page.
     app.post("/api/friends", (req, res) => {
-        res.send(`post api/friends ${req.friendData}`);
+        res.send(`post api/friends ${req.friendsArray}`);
     });
 
 
