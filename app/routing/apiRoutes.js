@@ -6,7 +6,7 @@
 // Load express module
 // const express = require("express");
 
-// Load path module  https://nodejs.org/api/path.html
+// Load path module  
 const path = require("path");
 
 const friendData = require("../data/friends.js");
@@ -16,7 +16,7 @@ module.exports = (app) => {
     // Below code handles when users "visit" a page.
     // In each of the below cases the user is shown an HTML page of content
     // ---------------------------------------------------------------------------
-  
+    
     // Route that leads to the survey page
     app.get("/api/friends", (req, res) => {
         res.send(`get api/friends ${JSON.stringify(req)}`);
@@ -29,4 +29,4 @@ module.exports = (app) => {
     });
 
 
-};
+}; 
