@@ -1,6 +1,7 @@
 // Load express module
-const app = express();
 const express = require("express");
+const app = express();
+
 // const bodyParser = require("body-parser");
 // Load path module  https://nodejs.org/api/path.html
 const path = require("path");
