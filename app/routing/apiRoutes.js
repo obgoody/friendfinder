@@ -7,9 +7,9 @@
 // const express = require("express");
 
 // Load path module  
-const path = require("path");
+// const path = require("path");
 
-const friendData = require("../data/friends");
+const friendsData = require("../data/friends");
 
 module.exports = (app) => {
     // API GET Requests
@@ -19,7 +19,7 @@ module.exports = (app) => {
     
     // Route that leads to the survey page
     app.get("/api/friends", (req, res) => {
-        res.send(`get api/friends ${JSON.stringify(req)}`);
+        res.json(friendsData);
     });
     // app.get("/api/friends", (req, res) => {
     //     res.json(friends);
